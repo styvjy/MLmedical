@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  pneumonia-classifier:
+    build: .
+    container_name: pneumonia-classifier-app
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+    restart: unless-stopped
